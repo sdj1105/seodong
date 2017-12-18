@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="userSql">
+
+
+	<insert id="UserSuccess" parameterType="com.co.kr.user.vo.UserVo">
+		<![CDATA[
+			INSERT
+				INTO USER_CREATE_TABLE
+				(
+				        REGIST_NO,
+				        INPUT_ID,
+				        FIRST_PWD,
+				        INPUT_NAME,
+				        INPUT_EMAIL,
+				        PHONE_NUMBER,
+				        USER_ZIP_CODE,
+				        USER_FIRST_ADDR,
+				        USER_SECOND_ADDR,
+				        REG_DE
+				    )VALUES(
+				         USER_CREATE_SEQ.NEXTVAL,
+				         #{inputId},
+				         #{firstPwd},
+				         #{inputName},
+				         #{inputEmail},
+				         #{phoneNumber},
+				         #{userZipCode},
+				         #{userFirstAddr},
+				         #{userSecondAddr},
+				        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+				)
+
+		]]>
+		/* com.co.kr.user.dao.userDao.UserSuccess */
+	</insert>
+
+	<select id="createIdCheck" parameterType="UserVo" resultType="UserVo">
+		SELECT INPUT_ID,
+		       FIRST_PWD
+		       FROM USER_CREATE_TABLE
+		       WHERE INPUT_ID = #{inputId}
+	</select>
+
+	<select id="createEmailCheck" parameterType="UserVo" resultType="UserVo">
+		SELECT INPUT_ID,
+		       FIRST_PWD
+		       FROM USER_CREATE_TABLE
+		       WHERE INPUT_EMAIL = #{inputEmail}
+	</select>
+
+
+
+</mapper>

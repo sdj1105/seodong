@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="freeBoard">
+	<select id="freeBoardList" parameterType="freeVo" resultType="freeVo">
+		SELECT 
+            FREE_BOR_IDX ,
+            FREE_BOR_TITLE ,
+            USER_NM ,
+            USER_ID ,
+            FREE_BOR_CONTENTS ,
+            FREE_BOR_VIEW_CNT ,
+            REG_DE ,
+            USE_YN 
+        FROM FREE_BOARD
+        WHERE FREE_BOR_IDX BETWEEN 1 AND 100
+        
+        /*com.co.kr.free.dao.freeDao.freeBoardList */
+	</select>
+</mapper>

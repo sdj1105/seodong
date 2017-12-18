@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:aop="http://www.springframework.org/schema/aop"
+      xmlns:tx="http://www.springframework.org/schema/tx"
+      xmlns:task="http://www.springframework.org/schema/task"
+      xmlns:context="http://www.springframework.org/schema/context"
+      xmlns:util="http://www.springframework.org/schema/util"
+      xsi:schemaLocation="   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                      http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                      http://www.springframework.org/schema/util
+                     http://www.springframework.org/schema/util/spring-util-3.0.xsd
+                     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+         ">
+
+<!-- 접속정보 암호화를 위한 bean s -->
+
+	 <bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+	     <property name="algorithm" value="PBEWithMD5AndDES"/>
+	     <property name="passwordEnvName" value="APP_ENCRYPTION_PASSWORD"/>
+	 </bean>
+
+	  <bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+	      <property name="config" ref="environmentVariablesConfiguration"/>
+	      <property name="password" value="jdbcPassWord"/>
+	  </bean>
+
+	  <bean id="propertyConfig" class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+	      <constructor-arg ref="configurationEncryptor"/>
+	      <property name="locations">
+	          <list>
+	              <value>classpath:config/properties/*Config.properties</value>
+	          </list>
+	      </property>
+	  </bean>
+<!-- 접속정보 암호화를 위한 bean e -->
+
+<!-- set DB Oracle -->
+    <bean id="dataSourceProxy" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+
+    <!-- 접속정보 암호화로 변경 -->
+        <property name="driverClassName" value="${jdbc.oracleDriver}"/>
+        <property name="url"      value="${jdbc.oracleUrl}" /> <!-- IP주소, 포트번호, ORCL 이부분 변경 -->
+        <property name="username" value="${jdbc.oracleUserName}" />                              <!-- 아이디 -->
+        <property name="password" value="${jdbc.oraclePassWord}" />                             <!-- 패스워드 -->
+
+	<!-- 기존 접속정보 비암호화
+			<property name="url"      value="jdbc:oracle:thin:@svncenter.xyz:1521:ORCL" />   IP주소, 포트번호, ORCL 이부분 변경
+	        <property name="username" value="sdj1105" />                                     아이디
+	        <property name="password" value="ssdj1105" />                                    패스워드
+	-->
+    </bean>
+    <bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+      <constructor-arg ref="dataSourceProxy" />
+      <property name="logFormatter">
+         <bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+            <property name="loggingType" value="MULTI_LINE" />
+         </bean>
+      </property>
+   </bean>
+
+	<context:component-scan base-package="com.co.kr">
+	      <context:include-filter  type="annotation"  expression="org.springframework.stereotype.Component"/>
+	      <context:include-filter  type="annotation"  expression="org.springframework.stereotype.Service"/>
+	      <context:include-filter  type="annotation"  expression="org.springframework.stereotype.Repository"/>
+	</context:component-scan>
+
+<!-- MySQL 바꾸는방법
+<bean id="dataSourceProxy" class="org.apache.commons.dbcp.BasicDataSource">
+         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+         <property name="url" value="jdbc:mysql://111.200.255.113:3306/bmw"></property>
+         <property name="username" value="아이디"></property>
+         <property name="password" value="패스워드"></property>
+    </bean> -->
+
+<!-- MsSQL 바꾸는방법
+   <bean id="dataSourceProxy" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+      <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="url" value="jdbc:sqlserver://111.222.255.212:8080;DatabaseName=skysky"/>
+      <property name="username" value="아이디"/>
+      <property name="password" value="패스워드"/>
+   </bean> -->
+
+</beans>
