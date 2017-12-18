@@ -1,0 +1,114 @@
+﻿오후 1:26 2017-11-18
+--------------------------------------------
+숙제 
+- 화면설계 - 디테일 내용 넣어서 오기
+- 테이블 설계 작업해오기
+
+
+--------------------------------------------
+핑테스트
+ping -t 168.126.63.0
+컨트롤+c 멈춤
+
+--------------------------------------------
+공인 ip 사설 ip 확인하는 방법
+네이버에서 내아이피 치면 나오는 주소
+공인 ip
+
+사설ip
+192.168.0.105
+--------------------------------------------
+ ip가 바뀌면 바꿀것들
+app - product - 오라클버전 폴더 - 한번더들어가고 network - admin 에 ip 바꾸면
+svn 및 서버 사용가능
+
+
+--------------------------------------------
+
+ojdbc6 import - maven으로 하고
+     pom.xml 변경
+
+
+What does <![CDATA[]]> i
+
+
+         <groupId>com.oracle</groupId>
+         <artifactId>ojdbc6</artifactId>
+         <version>11.2.0.4</version>
+
+--------
+
+SQL
+				        REGIST_NO,
+				        INPUT_ID,
+				        FIRST_PWD,
+				        INPUT_NAME,
+
+
+				        INPUT_EMAIL,
+
+
+
+				        PHONE_NUMBER,
+				        USER_ZIP_CODE,
+				        USER_FIRST_ADDR,
+ USER_SECOND_ADDR,
+REG_DE  
+
+
+
+
+----
+
+jrebel - 설치 : 리스타트 자동 프로그램
+
+
+
+15일키
+rO0ABXNyAChjb20uemVyb3R1cm5hcm91bmQubGljZW5zaW5nLlVzZXJMaWNlbnNlAAAAAAAAAAECAANMAAdkYXRhTWFwdAAPTGphdmEvdXRpbC9NYXA7WwAHbGljZW5zZXQAAltCWwAJc2lnbmF0dXJlcQB+AAJ4cHB1cgACW0Ks8xf4BghU4AIAAHhwAAACZKztAAVzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAYdwgAAAAgAAAAFHQACGxhc3ROYW1ldAADc2VvdAALR2VuZXJhdGVkQnl0AARBVVRPdAAFRW1haWx0ABNuZXdmYWNlODNAbmF2ZXIuY29tdAAMT3JnYW5pemF0aW9udAAHc2VvZG9uZ3QACmVudGVycHJpc2V0AAR0cnVldAAHUHJvZHVjdHQABkpSZWJlbHQAC0dlbmVyYXRlZE9uc3IADmphdmEudXRpbC5EYXRlaGqBAUtZdBkDAAB4cHcIAAABX84qHUt4dAAJdmFsaWRGcm9tcQB+ABB0AAdPcmRlcklkdAAAdAALbGltaXRlZEZyb21xAH4AEHQAB3ZlcnNpb250AAQxLjIxdAAETmFtZXQACGRvbmcgc2VvdAAFU2VhdHN0AAExdAADdWlkdAAoYzQyNWM4MDBlNWFlMDcwM2EzZmY0OGFmMGM4ZDU5YjI4NzhiM2MyNnQACWZpcnN0TmFtZXQABGRvbmd0AARUeXBldAAKZXZhbHVhdGlvbnQACnZhbGlkVW50aWxzcQB+AA93CAAAAWcl20lLeHQACG92ZXJyaWRldAAFZmFsc2V0AAxsaW1pdGVkVW50aWxxAH4AInQACXZhbGlkRGF5c3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAOeHVxAH4ABAAAAQB+xq8+V8Zdb+WBR15F2X1RGYOIrFQbkF3FrI1CjH2naQ5hKJOmWQdTBMEGqK75qCZ9TN/knF0rr4eIo9fNQj4iK+XsDfmXwy0qPXeqmaEVUkb49iWTmDH/PoL5w164RSn1BJXLFKGYZJlkQpKNuR05ouYfnveaK8ELygaYXzBwvoU+D1f3GfC1CM9coaLU3Rf0SJj0X6UZNvSgcGbSw3lEbfylarvApJUN5rfxnvcYTeUNnrc1pR7o5ob8T/fZcNqlxQ9SyEGzZt9ttuVePlzgXmnvA+2TbpoYnWbjZ8WuzaMkbjP5QaI5IBnSr7Nb07clg//XvHxf69xO079Lkskw
+
+-----
+
+1번째 주소
+https://zeroturnaround.com/software/jrebel/trial/
+
+2번째 주소
+https://my.jrebel.com/
+
+newface83@naver.com
+ssdj1105
+
+재인증할때 가야할주소
+https://my.jrebel.com/plans
+
+https://my.jrebel.com/account/how-to-activate
+
+
+
+-----
+
+
+onkeyup - 입력은되는데 막음
+
+onkeypress - 입력 완전막는거
+
+
+
+
+<script src="<c:url value='/common/common.js' />" charset="utf-8"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

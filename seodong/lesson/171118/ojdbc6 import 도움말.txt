@@ -1,0 +1,33 @@
+
+참조 사이트
+http://blog.naver.com/PostView.nhn?blogId=prinb1213&logNo=220801938898&parentCategoryNo=&categoryNo=16&viewDate=&isShowPopularPosts=true&from=search
+
+1-1. 에러
+- pom.xml 파일에 x 표시가 나타남
+- pom.xml 파일을 열고 overview를 확인하니 missing artifact ~ 에러가 보임
+
+1-2. 수정
+- 프로젝트 이름을 오른쪽 클릭>Maven>update project >OK 선택
+
+1-3. 일부 해결
+- missing artifact 에러가 48개에서 하나로 줄어듬
+
+2-1. 에러
+- missing artifact com.oracle.ojdbc6:jar:11.1.0.7.0 에러가 남음
+
+2-2. 수정
+- 구글 검색후 해결법 찾음 (http://paha.kr/127)
+- 오라클과 메이븐의 라이센스 문제로 인해 발생한 오류라고 한다. 해당 페이지의 2번 방법 이용
+- 2-2번은 이미 파일에 입력된 내용이었고, 2-1번의 내용을 파일에 새롭게 추가
+<repositories>
+    <repository>
+        <id>oracle</id>
+        <name>ORACLE JDBC Repository</name>
+        <url>http://maven.jahia.org/maven2</url>
+    </repository>
+</repositories>
+- 다시 1-2번의 방법대로 프로젝트 업데이트를 함
+
+2-3. 해결됨
+[출처] [spring] pom.xml에서 missing artifact 오류|작성자 루샤
+

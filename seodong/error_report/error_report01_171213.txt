@@ -1,0 +1,73 @@
+﻿오류리포트
+
+
+
+
+0번째 오류 --------------------------------------------------
+ojdbc6 에러 - intall  install artifact ojdbc6 해줫슴
+
+1번째 오류 --------------------------------------------------
+jdbc db 에러 - ORCL이엿는데 xe로 바꿈 - 내꺼 DB로 바꿈
+
+
+2번째 오류 --------------------------------------------------
+00000 - 내 local DB에 테이블이 없어서 테이블 생성및 시퀀스 및 값 넣어줌 임의로
+
+
+
+3번째 오류 --------------------------------------------------
+ORA-02289 - 시퀀스가 생성이 되지 않았음
+
+참조
+http://blog.naver.com/PostView.nhn?blogId=uioioiui&logNo=220382052714&parentCategoryNo=&categoryNo=22&viewDate=&isShowPopularPosts=true&from=search
+
+java.sql.SQLSyntaxErrorException: ORA-02289: 시퀀스가 존재하지 않습니다.   Spring / 컴퓨터학 
+2015. 6. 6. 21:21
+http://blog.naver.com/uioioiui/220382052714
+
+HTTP Status 500 - Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: Error selecting key or setting result to parameter object. Cause: java.sql.SQLSyntaxErrorException: ORA-02289: 시퀀스가 존재하지 않습니다.
+
+java.sql.SQLSyntaxErrorException: ORA-02289: 시퀀스가 존재하지 않습니다.
+
+
+Auto-Generated Key 사용 시 나는 에러 중 하나
+
+[시퀀스이름].NEXTVAL AS MEMBERIDX FROM DUAL
+
+이 명령어에서 시퀀스이 생성되지 않아서 나는 것이다.
+
+CREATE sequence 시퀀스이름;
+
+이렇게 시퀀스를 생성해주면 된다.
+[출처] java.sql.SQLSyntaxErrorException: ORA-02289: 시퀀스가 존재하지 않습니다.|작성자 경진
+
+
+
+
+4번째 오류 --------------------------------------------------
+ORA-12899   value too large for column
+컬럼의 값이 암호화로 인해 작았음 그래서 늘려줬음 500으로
+
+참조 http://tipland.tistory.com/30
+
+ORA-12899: value too large for column
+( ORA-12899: "유저명"."테이블명"."컬럼명" 열에 대한 값이 너무 큼(실제: 16, 최대값: 10)  )
+ 
+ 
+ 
+해당에러는 표현된 컬럼에 정의되어진 길이보다 큰 문자열을 INSERT 하려고 할때 발생하는 에러.
+ 
+실제로 값이 커서 발생하는 문제일 수도 있으나,  간혹 캐릭터셋(charset) 의 문제로 인한 에러가 발생 할 수도 있음.
+ 
+실제 UTF-8 과 ASCII 의 Byte 수가 틀리기 때문입니다.
+ 
+
+ 
+해당 오류가 발생할 경우 1차적으로 해당 컬럼에 삽입되어지는 데이터의 값을 먼저 확인을 하시면 되고,
+ 
+한글등이 섞여 있는 경우는 Byte 수를 잘 계산하여 컬럼 사이즈와 비교를 해봐야 함.
+ 
+오라클 캐릭터셋의 변경은 다음과같이..
+
+
+출처: http://tipland.tistory.com/30 [외로운 개발자]

@@ -1,0 +1,129 @@
+﻿bbgbg
+f
+오후 1:12 2017-09-23
+dd
+
+샘사이트 - 카톡 계정으로 로그인
+http://www.skysens.xyz/main/freeBoardSelectList.do
+# neon 설치함: 최신버전 검증문제로 사용한동안 안함
+
+javac - 컴파일해주는거   
+        jdk설치해야됨
+
+# mapping주소가 틀려서 서버 런타임 오류가남
+
+# SVN설치 - 형상관리: 전부 ok설치
+      version 상관없음
+  Git - sk
+
+1. JAVA SE 
+  자바 디벨롭 다운로드8
+   JDK 8ver 다운로드 설치
+
+2 시스템변수 설정
+  JAVA_HOME -> C:\Program Files\Java\jdk1.8.0_45
+  CLASSPATH -> .;%JAVA_HOME%\lib\tools.jar
+  Path
+
+설치후 javac에서 확인가능
+      java
+
+3 workspace폴더 설정 및 이클립스 다운로드
+dddddd이클립스 - JAVA EE win 64bit neon 다운로드
+
+
+4 
+
+------------------------
+
+servlet-context.xml
+프리픽스와 서프픽스 설정
+
+web.xml
+원하는 맵핑 설정
+
+
+
+------
+숙제
+로그인페이지 폼 만들어오기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+오류
+- 서버 런타임 에러
+https://m.blog.naver.com/PostView.nhn?blogId=kin412&logNo=220414307868&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
+
+- 8005 8009 8060 - 포트번호 겹침으로 인한것
+- 서버가 돌아가고 있는데 재실행하면 에러 이클립스 꺼짐
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

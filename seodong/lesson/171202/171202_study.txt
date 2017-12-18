@@ -1,0 +1,21 @@
+﻿
+171125 - error
+loginController
+sservice impl error
+
+----------------------------------------
+
+error 에러 리포트
+
+1 SQL문 가로를 잘못씀
+2 Login_SQL의  parameterType="com.co.kr.common.login.vo.LoginVo" 주소를 잘못씀
+
+찾기 오픈 레퍼런스
+
+control shift R 찾기 단축키
+
+
+control shift L 단어 서치
+
+
+, produces =" text/plan charset=utf-8"

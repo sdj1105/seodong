@@ -1,0 +1,132 @@
+﻿2017-12-16 (토)
+
+------------
+Sha256Util.java
+암호화에 필요한 파일
+
+--------
+프로그램
+- keyzen, toad for oracle
+- 나비캣
+- totalcommand
+- 어노테이션 설정 프로그램
+- sql developer - 경량화버전
+
+- sitemesh - 셋팅수월, 소규모사이트사용
+   = apache어쩌구 프로그램000
+
+------
+web.xml에서부터 설명
+동작 돌아가는거
+
+data.skysens.xyz -> svncenter.xyz 바뀜
+
+
+
+
+---
+
+톰캣 7에서
+
+URIEncoding="UTF-8"
+
+
+
+
+----
+스프링 순서
+ server.xml
+
+
+
+1 web.xml - classpath에서 conig를 찾아감
+          resource폴더에서config.xml
+         파일이 여러개일경우 /**/를 넣
+어줌
+         error처리도 여기서셋팅해줌
+2 action-servlet     // 위에서부터 밑으로 읽어들임
+      context-param - 이파일에 있는것들을 셋팅
+      servlet->담당:mapping 지정한 모든 .do를 맵핑 시킴
+
+
+
+
+-----
+- tag liverlary
+tag iverlary -> web.mxl에서 선언
+tag.vm에 공통적인 것들을 셋팅
+   셋팅후에는 전체 jsp에서 선언할 필요가 없슴
+
+------
+프로그램 설치하면 web.xml에 추가를 시켜줬음
+
+----
+스프링 프로젝트 업데이트 -> alt +enter
+
+
+--------
+002
+배포
+배포를 배우겟슴
+
+WAR
+
+1
+C:\study\apache-tomcat-8.0.38\webapps
+이폴더에 war파일을 넣는다
+
+2
+C:\study\apache-tomcat-8.0.38\bin에서
+sta tab누름 -> startup.bat
+
+C:\study\apache-tomcat-8.0.38\conf
+server.xml에 
+host아래에
+<Context path="/" docBase="Potoprojects" reloadable="false"></Context>
+를 추가
+
+3
+http://localhost:8080/login.do
+해당주소를 접속
+
+error가 나면 접속이 안됨
+error가 나면 java(TM) 끄고 startup.bat으로 시작
+
+
+Potoprojects
+
+ㅇㅇㅇㅇㅇ
+
+ハンドルネームを入力してください
+
+숙제
+ㅇㄴㅁㅇㄴㅁㅇㅁㄴ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+줌디스크 무료 사용법
+
+

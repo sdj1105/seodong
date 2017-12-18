@@ -1,0 +1,108 @@
+﻿오후 1:19 2017-11-11
+- 회원가입 DB테이블
+------------------------------------------
+Navicat tool - DB tool
+
+Mssql MysQl Oracle
+
+각 Db default 포트번호
+
+Mssql- 포트번호 기입이 좀다름
+
+DB 구분컬럼이 있음
+
+------------------------------------------
+
+회원가입 테이블 만듬
+
+not null - 비어있으면안됨
+
+스프링구조
+- Controller
+- Dao
+- Impl
+- Service
+
+중복이 되면 안되는값 PRIMARY KEY
+
+------------------------------------------
+ex)
+SELECT REG_ID FROM A.TABLE_BTH;
+INSERT NUMQWE FROM B.S_TABLE;
+--DSADSAD
+
+REGIST_NO - 인덱스넘버
+USER_ID
+USER_PW
+TMPR_PW_NO
+USER_NM
+USER_EMAIL
+USER_PHONE
+USER_ZIP_CODE
+USER_FIRST_ADDR
+USER_SECOND_ADDR
+USER_LEVEL
+USER_DEL_YN
+USER_DEL_DE
+REG_DE
+PASSWORD_LAST_CHANCE_DE
+FAIL_CNT
+LAST_CONTACT_FMT_DT
+IP_ADDR
+
+-----
+회원가입 view에서 회원이 가입
+회원가입 받는거 DB에 저장
+
+DE - DATE
+REG - 가입날짜
+
+MYSQL
+- REG_DATE_IMAGE 단어와 단어사이 _언더바로 구분
+
+
+
+
+
+
+
+-- 2017.11.11 토요일 회원가입 테이블
+
+-- INDEX NUMBER
+
+
+DB - 마지막에 COMMIT;
+
+
+스프링 셋팅
+- contex-file2개를 삭제한다
+- spring 폴더를 삭제한다
+
+
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
+- 서비스 impl 확인
+  패키지 확인
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

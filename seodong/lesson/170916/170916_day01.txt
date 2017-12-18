@@ -1,0 +1,95 @@
+﻿2017-09-16 오후 2:15 
+
+<Tool>
+1 서브라임텍스트3
+emmet - plugin
+html - 코드힌트 자동완성가능
+2 Atom
+
+개발환경 설정
+11111
+1 JAVA JDK설치 -> 환경변수설정
+버전 SE설치
+ C:\Program Files\Java
+ cmd -> java -version 확인가능
+ - 환경변수 설정
+   1 JAVA_HOME - 해당자바설치된곳 입력
+   2 CLASSPATH - .;%JAVA_HOME%\lib\tools.jar;
+   3 PATH
+  %JAVA_HOME%\bin;C:\ProgramData\
+   c:\ 앞에 \JAVA_HOME을 입력
+
+   ※ JDK 설정후 cmd에 javac 입력하면
+   확인가능
+
+참고
+CLASSPATH 설정
+http://carfain.tistory.com/entry/JAVA-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%B8%ED%8C%85-%EB%B0%8F-%ED%99%95%EC%9D%B8
+
+2222
+이클립스 설치
+이클립스 네온설치
+
+
+333333
+워크스페이스 설정 -> c: study폴더
+
+
+444444
+이클립스 램설정변경
+eclipse.ini 파일설정 변경
+ 램설정 변경
+
+555555
+이클립스 하단창 설정
+하단창 console, markers, properties
+
+
+666666666666
+톰켓 설치 apache-tomcat-8.0.38
+
+
+777777777777
+스프링 STS 설치
+       스프링 툴 사이트
+   참고 STS설치
+   http://blog.miyam.net/35
+
+
+
+8888888
+스프링 프로젝트 생성
+ - server - run as - run on server
+- 안될시에 사용자 .m2 폴더 삭제
+- 안될시에 프로젝트 재생성
+hello world 뜸
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+99999999999999
+- 자바 업데이트 설정안함
+
+
+컨트롤 + 시프트 +o 자동import
+
+메소드랑 mapping 주소는 일치하게 작성 보통
+
+
+주석풀기 -> 컨트롤 시프트 역슬래시
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

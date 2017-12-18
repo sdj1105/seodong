@@ -1,0 +1,78 @@
+﻿
+20171021 토요일
+
+http://www.skysens.xyz/main/freeBoardSelectList.do
+
+http://www.skysens.xyz/main/freeBoardSelectList.do
+v
+v
+http://www.skysens.xyz/main/freeBoardSelectList.do
+
+
+----------------------------------------------
+- error404 페이지 만들기
+   컨트롤러 안탐 - webapp에 만들기
+   ex) http://localhost:8080/error404.jsp
+
+
+----------------------------------------
+오류리스트
+1 메이븐 클린이 아니라 프로젝트 클린임
+2 그리고 서버 다시돌리기
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+----------------------------------------
+button에 타입을 안걸면 submit이 됨
+
+	<button >버튼임</button>		
+	<input type="text" name="" value="">
+
+----------------------------------------
+
+콜백함수-> 파라미터를 n개를 넘겨서, 다른쪽에서 호출해서 사용하는것, 호출해서 호출을다시해서 사용할수있음
+
+
+tag안에서 메소드 호출은 onclick="test1"
+
+
+재귀함수-> 자기자신을 불러오는 함수
+
+경고창 alert();
+
+콘솔 찍으면 로그가 찍힘
+console.log();
+
+
+jquery cdn - 인터넷주소로 사용가능
+
+
+자바스크립트에서 값이 없으면 undefine 으로 나옴
+자바에서는 nulll로 나옴
+
+
+---
+선언방식
+		// 방식1
+		$(function name() {
+			
+		});
+		
+		// 방식2
+		$(document).ready(function () {
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
